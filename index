@@ -1,0 +1,796 @@
+	<!DOCTYPE html>
+	<html lang="es">
+	<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<title>Santiago Itzae | Mundial 2026 ⚽</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+	<style>
+
+	*{
+	  margin:0;
+	  padding:0;
+	  box-sizing:border-box;
+	}
+
+	body{
+	  font-family:'Montserrat',sans-serif;
+	  overflow-x:hidden;
+	  color:white;
+
+	  background:
+	    linear-gradient(
+	      135deg,
+	      #3558D8 0%,
+	      #18C964 45%,
+	      #B7E300 75%,
+	      #D92D20 100%
+	    );
+
+	  min-height:100vh;
+
+	  position:relative;
+	}
+
+	/* CAPA OSCURA */
+
+	body::before{
+	  content:"";
+	  position:fixed;
+	  inset:0;
+
+	  background:
+	    rgba(0,0,0,.18);
+
+	  z-index:-1;
+	}
+
+	/* FIGURITAS FLOTANTES */
+
+	.lista-contenedor {
+	            max-width: 400px;
+	            margin: 0 auto;
+	            font-family: Arial, sans-serif;
+	        }
+
+	        .elemento-lista {
+	            background-color: #005391;
+	            border: 1px solid #ddd;
+	            padding: 15px;
+	            margin-bottom: 10px;
+	            border-radius: 5px;
+	        }
+
+	.sticker{
+	  position:absolute;
+	  font-size:42px;
+	  animation:float 4s ease-in-out infinite;
+	  z-index:1;
+	  opacity:.95;
+	}
+
+	.s1{
+	  top:4%;
+	  left:5%;
+	}
+
+	.s2{
+	  top:10%;
+	  right:8%;
+	  animation-delay:1s;
+	}
+
+	.s3{
+	  top:38%;
+	  left:2%;
+	  animation-delay:2s;
+	}
+
+	.s4{
+	  top:65%;
+	  right:5%;
+	  animation-delay:3s;
+	}
+
+	.s5{
+	  bottom:8%;
+	  left:10%;
+	  animation-delay:1.5s;
+	}
+
+	.s6{
+	  bottom:12%;
+	  right:12%;
+	  animation-delay:2.5s;
+	}
+
+	@keyframes float{
+
+	  0%,100%{
+	    transform:translateY(0px) rotate(0deg);
+	  }
+
+	  50%{
+	    transform:translateY(-12px) rotate(8deg);
+	  }
+
+	}
+
+	/* HERO */
+
+	.hero{
+	  min-height:100vh;
+
+	  display:flex;
+	  justify-content:center;
+	  align-items:center;
+
+	  padding:25px;
+
+	  position:relative;
+	  z-index:2;
+	}
+
+	.content{
+	  width:100%;
+	  max-width:850px;
+
+	  text-align:center;
+	}
+
+	/* BADGE */
+
+	.badge{
+
+	  display:inline-block;
+
+	  background:
+	    rgba(255,255,255,.18);
+
+	  backdrop-filter:blur(10px);
+
+	  border:
+	    2px solid rgba(255,255,255,.22);
+
+	  padding:12px 28px;
+
+	  border-radius:50px;
+
+	  font-weight:800;
+
+	  margin-bottom:25px;
+
+	  box-shadow:
+	    0 0 25px rgba(255,255,255,.15);
+
+	  animation:pulse 2s infinite;
+	}
+
+	@keyframes pulse{
+
+	  0%{
+	    transform:scale(1);
+	  }
+
+	  50%{
+	    transform:scale(1.05);
+	  }
+
+	  100%{
+	    transform:scale(1);
+	  }
+
+	}
+
+	/* TITULO */
+
+	h1{
+
+	  font-family:'Anton',sans-serif;
+
+	  font-size:5.5rem;
+
+	  line-height:.95;
+
+	  text-transform:uppercase;
+
+	  text-shadow:
+	    0 5px 20px rgba(0,0,0,.35);
+
+	  margin-bottom:18px;
+
+	  letter-spacing:2px;
+	}
+
+	.subtitle{
+
+	  font-size:1.3rem;
+
+	  font-weight:600;
+
+	  margin-bottom:35px;
+
+	  text-shadow:
+	    0 3px 10px rgba(0,0,0,.3);
+	}
+
+	/* CARD */
+
+	.card{
+
+	  background:
+	    rgba(255,255,255,.14);
+
+	  backdrop-filter:blur(18px);
+
+	  border:
+	    2px solid rgba(255,255,255,.18);
+
+	  border-radius:35px;
+
+	  padding:40px 30px;
+
+	  box-shadow:
+	    0 10px 40px rgba(0,0,0,.25);
+
+	  position:relative;
+
+	  overflow:hidden;
+	}
+
+	/* EFECTO BRILLO */
+
+	.card::before{
+
+	  content:"";
+
+	  position:absolute;
+	  inset:0;
+
+	  background:
+	    linear-gradient(
+	      120deg,
+	      transparent 0%,
+	      rgba(255,255,255,.08) 20%,
+	      transparent 40%
+	    );
+
+	  animation:shine 6s linear infinite;
+	}
+
+	@keyframes shine{
+
+	  0%{
+	    transform:translateX(-120%);
+	  }
+
+	  100%{
+	    transform:translateX(120%);
+	  }
+
+	}
+
+	/* INFO */
+
+	.info{
+
+	  display:grid;
+
+	  grid-template-columns:
+	    repeat(auto-fit,minmax(220px,1fr));
+
+	  gap:20px;
+	}
+
+	.info-box{
+
+	  background:
+	    rgba(255,255,255,.10);
+
+	  border:
+	    2px solid rgba(255,255,255,.12);
+
+	  border-radius:25px;
+
+	  padding:25px 15px;
+	}
+
+	.label{
+
+	  font-size:.95rem;
+
+	  margin-bottom:10px;
+
+	  opacity:.9;
+	}
+
+	.value{
+
+	  font-size:1.3rem;
+
+	  font-weight:800;
+	}
+
+	/* IMPORTANTE */
+
+	.important-box{
+
+	  margin-top:30px;
+
+	  background:
+	    linear-gradient(
+	      135deg,
+	      rgba(255,255,255,.18),
+	      rgba(255,255,255,.08)
+	    );
+
+	  border:
+	    3px dashed white;
+
+	  border-radius:25px;
+
+	  padding:25px;
+
+	  box-shadow:
+	    0 0 25px rgba(255,255,255,.15);
+	}
+
+	.important-box h3{
+
+	  font-size:1.5rem;
+
+	  margin-bottom:15px;
+	}
+
+	.important-box p{
+
+	  line-height:1.6;
+
+	  margin-bottom:10px;
+
+	  font-weight:600;
+	}
+
+	/* COUNTDOWN */
+
+	.countdown{
+
+	  margin-top:40px;
+	}
+
+	.countdown h3{
+
+	  margin-bottom:22px;
+	}
+
+	.timer{
+
+	  display:flex;
+
+	  justify-content:center;
+
+	  flex-wrap:wrap;
+
+	  gap:16px;
+	}
+
+	.time-box{
+
+	  width:90px;
+	  height:90px;
+
+	  background:
+	    rgba(255,255,255,.12);
+
+	  border-radius:22px;
+
+	  display:flex;
+
+	  flex-direction:column;
+
+	  justify-content:center;
+
+	  align-items:center;
+
+	  border:
+	    2px solid rgba(255,255,255,.15);
+	}
+
+	.number{
+
+	  font-size:2rem;
+
+	  font-weight:800;
+	}
+
+	.small{
+
+	  font-size:.8rem;
+	}
+
+	/* BOTONES */
+
+	.buttons{
+
+	  margin-top:40px;
+
+	  display:flex;
+
+	  justify-content:center;
+
+	  flex-wrap:wrap;
+
+	  gap:18px;
+	}
+
+	.btn{
+
+	  text-decoration:none;
+
+	  padding:16px 28px;
+
+	  border-radius:50px;
+
+	  font-weight:800;
+
+	  transition:.3s;
+	}
+
+	.btn:hover{
+
+	  transform:
+	    translateY(-4px)
+	    scale(1.05);
+	}
+
+	.btn-whatsapp{
+
+	  background:#25D366;
+
+	  color:white;
+
+	  box-shadow:
+	    0 0 25px rgba(37,211,102,.35);
+	}
+
+	.btn-map{
+
+	  background:white;
+
+	  color:#111;
+	}
+
+	/* FOOTER */
+
+	.footer{
+
+	  margin-top:35px;
+
+	  font-size:1rem;
+
+	  font-weight:600;
+
+	  text-shadow:
+	    0 3px 10px rgba(0,0,0,.25);
+	}
+
+	body, footer {
+	  margin: 0;
+	  padding: 0;
+	}
+
+	footer {
+	  width: 100%;
+	}
+
+	/* Hace que la imagen ocupe todo el ancho y se adapte */
+	.footer-img {
+	  width: 100%;
+	  height: auto; /* Mantiene la proporción de la imagen sin deformarla */
+	  display: block; /* Elimina un espacio en blanco común debajo de las imágenes */
+	}
+
+	/* MOBILE */
+
+	@media(max-width:768px){
+
+	  h1{
+	    font-size:3.8rem;
+	  }
+
+	  .subtitle{
+	    font-size:1rem;
+	  }
+
+	  .card{
+	    padding:30px 20px;
+	  }
+
+	  .time-box{
+	    width:78px;
+	    height:78px;
+	  }
+
+	  .number{
+	    font-size:1.5rem;
+	  }
+
+	}
+
+	</style>
+	</head>
+
+	<body>
+
+	<!-- STICKERS -->
+
+	<div class="sticker s1">⚽</div>
+	<div class="sticker s2">🏆</div>
+	<div class="sticker s3">⭐</div>
+	<div class="sticker s4">🥅</div>
+	<div class="sticker s5">🎉</div>
+	<div class="sticker s6">⚽</div>
+
+	<!-- HERO -->
+
+	<div class="hero">
+
+	  <div class="content">
+
+	    <div class="badge">
+	      WORLD CUP PARTY 2026 ⚽
+	    </div>
+
+	    <h1>
+	      Santiago<br>
+	      Itzae
+	    </h1>
+
+	    <div class="subtitle">
+	      ¡Estás invitado al Mundial de los 8 años! 🏆🌎
+	    </div>
+
+	  <div class="logo-container">
+	    <img src="https://media.glamour.mx/photos/68d71d27e9e62282c0bc90a8/16:9/w_2560%2Cc_limit/mascotas-del-mundial-2026.jpg" alt="Santi team" class="footer-img">
+	  </div>
+	  
+	    <div class="card">
+
+	      <div class="info">
+
+	        <div class="info-box">
+
+	          <div class="label">
+	            📅 FECHA
+	          </div>
+
+	          <div class="value">
+	            04 JULIO 2026
+	          </div>
+
+	        </div>
+
+	        <div class="info-box">
+
+	          <div class="label">
+	            ⏰ HORARIO
+	          </div>
+
+	          <div class="value">
+	            9:00 AM
+	          </div>
+
+	        </div>
+
+	        <div class="info-box">
+
+	          <div class="label">
+	            📍 LUGAR
+	          </div>
+
+	          <div class="value">
+	            LLano Grande
+	          </div>
+
+	        </div>
+
+	      </div>
+
+	      <!-- IMPORTANTE -->
+
+	        
+	     
+      <div id="openPopup" class="important-box">
+			<p >   📣 IMPORTANTE       </p>
+			<p >⚽Haz clic aquí para ver más información</p>
+      </div>
+
+<div id="popup" class="popup">
+  <div class="popup-contenido">
+    <span id="closePopup" class="cerrar">&times;</span>
+    		<div class="lista-contenedor" >	    
+    <div class="elemento-lista">⚽ 🎯 Actividad especial: Rally Mundialista </div>
+
+					<div class="elemento-lista">
+Durante el festejo realizaremos un divertido rally en el que los niños participarán en diferentes retos y juegos. Al completar cada actividad recibirán estampitas que les ayudarán a llenar su álbum mundialista.
+
+Para que puedan disfrutar completamente de la experiencia y completar todos los desafíos, les pedimos llegar puntualmente.
+
+
+• La fiesta se llevará a cabo en un área de bosque y espacios abiertos, donde los niños tendrán libertad para correr, jugar y participar en las actividades.
+
+• Recomendamos que los pequeños asistan con ropa y calzado deportivo cómodos.
+
+• Sugerimos llevar una muda de ropa adicional, ya que algunas actividades podrían implicar movimiento, tierra o agua.
+
+ </div>
+				</div>
+  </div>
+</div>
+<style>
+  /* Fondo del popup */
+  .popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Fondo semi-transparente */
+  }
+
+  /* Caja del contenido */
+  .popup-contenido {
+    background: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  /* Botón cerrar */
+  .cerrar {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+  }
+</style>
+<script>
+  const openPopup = document.getElementById("openPopup");
+  const popup = document.getElementById("popup");
+  const closePopup = document.getElementById("closePopup");
+
+  // Abrir popup
+  openPopup.addEventListener("click", () => {
+    popup.style.display = "block";
+  });
+
+  // Cerrar popup
+  closePopup.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  // Cerrar si se hace clic fuera del contenido
+  window.addEventListener("click", (event) => {
+    if (event.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+</script>
+	      <!-- COUNTDOWN -->
+
+	      <div class="countdown">
+
+	        <h3>
+	          ⏳ Faltan para el gran partido
+	        </h3>
+
+	        <div class="timer">
+
+	          <div class="time-box">
+	            <div class="number" id="days">00</div>
+	            <div class="small">DÍAS</div>
+	          </div>
+
+	          <div class="time-box">
+	            <div class="number" id="hours">00</div>
+	            <div class="small">HORAS</div>
+	          </div>
+
+	          <div class="time-box">
+	            <div class="number" id="minutes">00</div>
+	            <div class="small">MIN</div>
+	          </div>
+
+	          <div class="time-box">
+	            <div class="number" id="seconds">00</div>
+	            <div class="small">SEG</div>
+	          </div>
+
+	        </div>
+
+	      </div>
+
+	      <!-- BOTONES -->
+
+	      <div class="buttons">
+
+	        <a
+	          class="btn btn-whatsapp"
+	          href="https://wa.me/527712072481?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20fiesta%20de%20Santiago%20Itzae%20⚽"
+	          target="_blank"
+	        >
+	          Confirmar asistencia 📲
+	        </a>
+
+	        <a
+	          class="btn btn-map"
+	          href="https://maps.app.goo.gl/sHNNBzFq8fXdmdgp7?g_st=ac"
+	          target="_blank"
+	        >
+	          Cómo llegar 🗺️
+	        </a>
+
+	      </div>
+
+	    </div>
+
+	    <div class="footer">
+	      ⚽🌎 “Las leyendas comienzan desde pequeños” 🌎⚽
+	    </div>
+
+	  </div>
+
+	</div>
+
+	<script>
+
+	const eventDate =
+	new Date("July 04, 2026 09:00:00").getTime();
+
+	const timer = setInterval(function(){
+
+	  const now = new Date().getTime();
+
+	  const distance = eventDate - now;
+
+	  const days = Math.floor(
+	    distance / (1000 * 60 * 60 * 24)
+	  );
+
+	  const hours = Math.floor(
+	    (distance % (1000 * 60 * 60 * 24))
+	    / (1000 * 60 * 60)
+	  );
+
+	  const minutes = Math.floor(
+	    (distance % (1000 * 60 * 60))
+	    / (1000 * 60)
+	  );
+
+	  const seconds = Math.floor(
+	    (distance % (1000 * 60))
+	    / 1000
+	  );
+
+	  document.getElementById("days").innerHTML = days;
+	  document.getElementById("hours").innerHTML = hours;
+	  document.getElementById("minutes").innerHTML = minutes;
+	  document.getElementById("seconds").innerHTML = seconds;
+
+	  if(distance < 0){
+	    clearInterval(timer);
+	  }
+
+	},1000);
+
+	</script>
+	<p>© 2026 Todos los derechos reservados</p>
+	</body>
+	</html>
