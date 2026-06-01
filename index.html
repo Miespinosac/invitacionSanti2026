@@ -38,16 +38,7 @@
 
 	/* CAPA OSCURA */
 
-	body::before{
-	  content:"";
-	  position:fixed;
-	  inset:0;
-
-	  background:
-	    rgba(0,0,0,.18);
-
-	  z-index:-1;
-	}
+	
 
 	/* FIGURITAS FLOTANTES */
 
@@ -319,6 +310,8 @@
 
 	.important-box{
 
+  cursor:pointer;
+
 	  margin-top:30px;
 
 	  background:
@@ -554,10 +547,10 @@
 	      ¡Estás invitado al Mundial de los 8 años! 🏆🌎
 	    </div>
 
-	  <div class="logo-container">
-	    <img src="https://media.glamour.mx/photos/68d71d27e9e62282c0bc90a8/16:9/w_2560%2Cc_limit/mascotas-del-mundial-2026.jpg" alt="Santi team" class="footer-img">
-	  </div>
-	  
+	<div class="logo-container">
+		  <img src="mascotas.jpg" alt="Santi team" class="footer-img">
+		</div>
+
 	    <div class="card">
 
 	      <div class="info">
@@ -647,6 +640,7 @@ Para que puedan disfrutar completamente de la experiencia y completar todos los 
   /* Caja del contenido */
   .popup-contenido {
     background: #fff;
+    color:#111;
     margin: 10% auto;
     padding: 20px;
     width: 300px;
@@ -662,26 +656,29 @@ Para que puedan disfrutar completamente de la experiencia y completar todos los 
   }
 </style>
 <script>
-  const openPopup = document.getElementById("openPopup");
-  const popup = document.getElementById("popup");
-  const closePopup = document.getElementById("closePopup");
+document.addEventListener("DOMContentLoaded", function() {
+  var openPopup = document.getElementById("openPopup");
+  var popup = document.getElementById("popup");
+  var closePopup = document.getElementById("closePopup");
 
-  // Abrir popup
-  openPopup.addEventListener("click", () => {
-    popup.style.display = "block";
-  });
+  if(openPopup){
+    openPopup.onclick = function(){
+      popup.style.display = "block";
+    };
+  }
 
-  // Cerrar popup
-  closePopup.addEventListener("click", () => {
-    popup.style.display = "none";
-  });
+  if(closePopup){
+    closePopup.onclick = function(){
+      popup.style.display = "none";
+    };
+  }
 
-  // Cerrar si se hace clic fuera del contenido
-  window.addEventListener("click", (event) => {
-    if (event.target === popup) {
+  window.onclick = function(event){
+    if(event.target == popup){
       popup.style.display = "none";
     }
-  });
+  };
+});
 </script>
 	      <!-- COUNTDOWN -->
 
@@ -708,10 +705,6 @@ Para que puedan disfrutar completamente de la experiencia y completar todos los 
 	            <div class="small">MIN</div>
 	          </div>
 
-	          <div class="time-box">
-	            <div class="number" id="seconds">00</div>
-	            <div class="small">SEG</div>
-	          </div>
 
 	        </div>
 
@@ -774,15 +767,10 @@ Para que puedan disfrutar completamente de la experiencia y completar todos los 
 	    / (1000 * 60)
 	  );
 
-	  const seconds = Math.floor(
-	    (distance % (1000 * 60))
-	    / 1000
-	  );
-
+	 
 	  document.getElementById("days").innerHTML = days;
 	  document.getElementById("hours").innerHTML = hours;
 	  document.getElementById("minutes").innerHTML = minutes;
-	  document.getElementById("seconds").innerHTML = seconds;
 
 	  if(distance < 0){
 	    clearInterval(timer);
